@@ -254,6 +254,15 @@ export default function Home() {
       </main>
 
       <footer>
+        <div className="footer-resource-bar">
+          <nav className="container footer-resource-links" aria-label="Ticketmaster resources">
+            <a href="https://developer.ticketmaster.com/support/faq/" target="_blank" rel="noopener noreferrer">FAQ</a>
+            <a href="https://developer.ticketmaster.com/support/terms-of-use/" target="_blank" rel="noopener noreferrer">General Terms of Use</a>
+            <a href="https://developer.ticketmaster.com/support/terms-of-use/partner/" target="_blank" rel="noopener noreferrer">Partner API Terms of Use</a>
+            <a href="https://developer.ticketmaster.com/support/contact-us/" target="_blank" rel="noopener noreferrer">Contact Us</a>
+            <a href="https://business.ticketmaster.com/" target="_blank" rel="noopener noreferrer">Ticketmaster Business</a>
+          </nav>
+        </div>
         <div className="container footer-inner">
           <a className="brand footer-brand" href="#top"><BrandMark /><span>TicketFlow</span></a>
           <p>Independent event discovery service. Ticket availability and pricing are provided by the ticketing platform.</p>

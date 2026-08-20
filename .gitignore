@@ -1,0 +1,11 @@
+bin/
+obj/
+.next/
+out/
+node_modules/
+.env*
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store

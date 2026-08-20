@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\TicketmasterCheckoutAssistant.Core\TicketmasterCheckoutAssistant.Core.csproj" />
+    <ProjectReference Include="..\TicketmasterCheckoutAssistant.Infrastructure\TicketmasterCheckoutAssistant.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

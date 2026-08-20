@@ -1,0 +1,24 @@
+[Unit]
+Description=TicketFlow checkout service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kamicode
+Group=kamicode
+WorkingDirectory=/opt/ticketflow-checkout
+ExecStart=/srv/kamicode-workspaces/.dotnet-sdk-8/dotnet /opt/ticketflow-checkout/TicketmasterCheckoutAssistant.Web.dll
+Environment=ASPNETCORE_URLS=http://127.0.0.1:5127
+Environment=ASPNETCORE_ENVIRONMENT=Production
+EnvironmentFile=-/etc/ticketflow-checkout.env
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/tmp
+
+[Install]
+WantedBy=multi-user.target

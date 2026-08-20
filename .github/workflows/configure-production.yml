@@ -1,0 +1,35 @@
+name: Configure production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require Ticketmaster credential
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: test -n "$TICKETMASTER_API_KEY"
+
+      - name: Configure restricted deployment identity
+        env:
+          DEPLOY_KEY: ${{ secrets.TICKETFLOW_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.TICKETFLOW_KNOWN_HOSTS }}
+        run: |
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$DEPLOY_KEY" > "$HOME/.ssh/id_ed25519"
+          chmod 600 "$HOME/.ssh/id_ed25519"
+          printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Activate live Discovery search
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: |
+          printf '%s' "$TICKETMASTER_API_KEY" \
+            | base64 -w0 \
+            | ssh -i "$HOME/.ssh/id_ed25519" ticketflowdeploy@193.203.15.98

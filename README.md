@@ -96,6 +96,11 @@ HTTP 200 once live Discovery search is configured.
 The checked-in `deploy/` unit and Nginx files run the application as an isolated
 systemd service on port `5127`; they contain no credentials.
 
+The manual `Configure production` GitHub workflow can install the Ticketmaster key
+through a forced-command SSH identity that has no shell, forwarding, or general sudo
+access. The credential is validated and written to the root-only runtime environment
+file without being printed.
+
 ## CLI options
 
 ```text

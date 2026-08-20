@@ -42,7 +42,7 @@ app.Use(async (context, next) =>
     context.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
     context.Response.Headers.ContentSecurityPolicy =
         "default-src 'self'; " +
-        "script-src 'self'; " +
+        "script-src 'self' 'unsafe-inline'; " +
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
         "font-src 'self' https://fonts.gstatic.com; " +
         "connect-src 'self'; " +

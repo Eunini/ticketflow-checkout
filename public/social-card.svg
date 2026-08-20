@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <path d="M0 540C230 430 420 680 660 520s350-40 540-180v290H0Z" fill="#18233a"/>
+  <rect x="88" y="82" width="72" height="72" rx="18" fill="#2952e3"/>
+  <path d="M110 105h28M110 118h28M110 132h17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <path d="m130 127 7 7 12-17" fill="none" stroke="#79e2a9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="137" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="700">TicketFlow</text>
+  <text x="88" y="305" fill="#fff" font-family="Arial, sans-serif" font-size="68" font-weight="700">Find a night worth</text>
+  <text x="88" y="382" fill="#fff" font-family="Arial, sans-serif" font-size="68" font-weight="700">remembering.</text>
+  <text x="91" y="442" fill="#b6c0d0" font-family="Arial, sans-serif" font-size="26">Search current events. Continue to official checkout.</text>
+  <rect x="88" y="500" width="310" height="58" rx="12" fill="#2952e3"/>
+  <text x="124" y="538" fill="#fff" font-family="Arial, sans-serif" font-size="21" font-weight="700">Search official listings →</text>
+</svg>
